@@ -1,0 +1,206 @@
+.tabel-cuaca {
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --padding-top: 16px;
+  --padding-bottom: 32px;
+}
+
+.kepala-tabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.kepala-tabel h2 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--app-text);
+}
+
+.kepala-tabel p {
+  margin: 0;
+  font-size: 0.74rem;
+  color: var(--app-text-muted);
+}
+
+.kepala-tabel__satuan {
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.12);
+  color: var(--ion-color-primary-shade);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.pembungkus-tabel {
+  padding: 12px;
+  border: 1px solid var(--app-border);
+  border-radius: 16px;
+  background: var(--app-surface);
+  box-shadow: var(--app-shadow-sm);
+  overflow-x: auto;
+}
+
+.pembungkus-tabel .dt-container {
+  font-size: 0.82rem;
+}
+
+.pembungkus-tabel .dt-layout-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 12px;
+}
+
+.pembungkus-tabel .dt-layout-row:last-child {
+  margin: 12px 0 0;
+}
+
+.pembungkus-tabel .dt-layout-cell {
+  padding: 0;
+}
+
+.pembungkus-tabel .dt-length label,
+.pembungkus-tabel .dt-search label,
+.pembungkus-tabel .dt-info {
+  color: var(--app-text-muted);
+  font-size: 0.76rem;
+}
+
+.pembungkus-tabel .dt-length select,
+.pembungkus-tabel .dt-search input {
+  margin-left: 6px;
+  padding: 7px 10px;
+  border: 1px solid var(--app-border);
+  border-radius: 10px;
+  background: #f8fafc;
+  color: var(--app-text);
+  font-size: 0.78rem;
+}
+
+.pembungkus-tabel .dt-search input {
+  min-width: 180px;
+}
+
+.pembungkus-tabel .dt-length select:focus,
+.pembungkus-tabel .dt-search input:focus {
+  outline: none;
+  border-color: var(--ion-color-primary);
+}
+
+.pembungkus-tabel .dt-paging {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.pembungkus-tabel .dt-paging button {
+  min-width: 32px;
+  padding: 5px 9px;
+  border: 1px solid var(--app-border);
+  border-radius: 9px;
+  background: #f8fafc;
+  color: var(--app-text);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.pembungkus-tabel .dt-paging button:hover:not(:disabled) {
+  border-color: var(--ion-color-primary);
+  color: var(--ion-color-primary-shade);
+}
+
+.pembungkus-tabel .dt-paging button.current,
+.pembungkus-tabel .dt-paging button[aria-current='page'] {
+  border-color: var(--ion-color-primary);
+  background: var(--ion-color-primary);
+  color: #ffffff;
+}
+
+.pembungkus-tabel .dt-paging button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.tabel-data {
+  width: 100% !important;
+  margin: 0 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabel-data.dataTable thead th {
+  border-bottom: none;
+  background: linear-gradient(160deg, #0ea5e9 0%, #0284c7 100%);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tabel-data.dataTable thead th.dt-ordering-asc span.dt-column-order::before,
+.tabel-data.dataTable thead th.dt-ordering-desc span.dt-column-order::after,
+.tabel-data.dataTable thead th.dt-ordering-asc span.dt-column-order::after,
+.tabel-data.dataTable thead th.dt-ordering-desc span.dt-column-order::before {
+  opacity: 0.95;
+}
+
+.tabel-data.dataTable tbody td {
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--app-border);
+  color: var(--app-text);
+  white-space: nowrap;
+}
+
+.tabel-data.dataTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabel-data.dataTable tbody tr:hover {
+  background: rgba(14, 165, 233, 0.08);
+}
+
+.tabel-data .kolom-nomor {
+  width: 52px;
+  color: var(--app-text-muted);
+  text-align: center;
+}
+
+.tabel-data .kolom-suhu {
+  font-weight: 700;
+  color: var(--ion-color-primary-shade);
+  text-align: right;
+}
+
+@media (max-width: 420px) {
+  .kepala-tabel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tabel-data.dataTable {
+    font-size: 0.76rem;
+  }
+
+  .pembungkus-tabel .dt-search input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .pembungkus-tabel .dt-layout-cell {
+    width: 100%;
+  }
+
+  .pembungkus-tabel .dt-paging {
+    justify-content: flex-start;
+  }
+}

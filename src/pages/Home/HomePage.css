@@ -1,0 +1,168 @@
+.beranda {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 16px;
+  --padding-bottom: 32px;
+}
+
+.kartu-utama {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 28px 20px;
+  border-radius: 24px;
+  background: linear-gradient(150deg, #38bdf8 0%, #0ea5e9 45%, #0369a1 100%);
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 14px 32px rgba(3, 105, 161, 0.28);
+}
+
+.kartu-utama__lokasi {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.kartu-utama__suhu {
+  margin-top: 10px;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.kartu-utama__label {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.kartu-utama__waktu {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.kisi-ringkasan {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.butir-ringkasan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  border: 1px solid var(--app-border);
+  border-radius: 16px;
+  background: var(--app-surface);
+  box-shadow: var(--app-shadow-sm);
+  text-align: center;
+}
+
+.butir-ringkasan__ikon {
+  font-size: 1.25rem;
+  color: var(--ion-color-primary);
+}
+
+.butir-ringkasan__ikon--rendah {
+  color: #0f766e;
+}
+
+.butir-ringkasan__ikon--tinggi {
+  color: #ea580c;
+}
+
+.butir-ringkasan__label {
+  font-size: 0.7rem;
+  color: var(--app-text-muted);
+}
+
+.butir-ringkasan__nilai {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--app-text);
+}
+
+.butir-ringkasan__nilai--kecil {
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.bagian-jam {
+  margin-top: 24px;
+}
+
+.kepala-bagian {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.kepala-bagian h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--app-text);
+}
+
+.kepala-bagian__satuan {
+  font-size: 0.75rem;
+  color: var(--app-text-muted);
+}
+
+.gulir-jam {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gulir-jam > * {
+  scroll-snap-align: start;
+}
+
+.gulir-jam::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gulir-jam::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.3);
+}
+
+.catatan-sumber {
+  margin: 20px 0 0;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: var(--app-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  .kartu-utama__suhu {
+    font-size: 3.4rem;
+  }
+
+  .kisi-ringkasan {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

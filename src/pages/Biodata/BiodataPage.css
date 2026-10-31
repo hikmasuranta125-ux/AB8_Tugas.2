@@ -1,0 +1,107 @@
+.biodata {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 16px;
+  --padding-bottom: 32px;
+}
+
+.kartu-biodata {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 28px 20px;
+  border-radius: 24px;
+  background: linear-gradient(150deg, #38bdf8 0%, #0ea5e9 45%, #0369a1 100%);
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 14px 32px rgba(3, 105, 161, 0.28);
+}
+
+.kartu-biodata__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border: 3px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.kartu-biodata__nama {
+  margin: 12px 0 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.kartu-biodata__nim {
+  margin: 0;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.9;
+}
+
+.kartu-biodata__peran {
+  margin-top: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+.daftar-biodata {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.butir-biodata {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--app-border);
+  border-radius: 16px;
+  background: var(--app-surface);
+  box-shadow: var(--app-shadow-sm);
+}
+
+.butir-biodata__ikon {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(14, 165, 233, 0.12);
+  color: var(--ion-color-primary-shade);
+  font-size: 1.2rem;
+}
+
+.butir-biodata__teks {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.butir-biodata__label {
+  font-size: 0.7rem;
+  color: var(--app-text-muted);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.butir-biodata__nilai {
+  font-size: 0.92rem;
+  color: var(--app-text);
+  line-height: 1.35;
+}
