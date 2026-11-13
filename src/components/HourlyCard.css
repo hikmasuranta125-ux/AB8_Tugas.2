@@ -1,0 +1,45 @@
+.kartu-jam {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 74px;
+  padding: 12px 10px;
+  border: 1px solid var(--app-garis);
+  border-radius: 14px;
+  background: var(--app-kartu);
+  color: var(--app-teks);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kartu-jam--aktif {
+  border-color: var(--app-aksen);
+  box-shadow: 0 6px 16px rgba(14, 165, 233, 0.22);
+}
+
+.kartu-jam__hari {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--app-teks-redup);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.kartu-jam__tanggal {
+  font-size: 11px;
+  color: var(--app-teks-redup);
+}
+
+.kartu-jam__suhu {
+  margin-top: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--app-aksen);
+}
+
+.kartu-jam__jam {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--app-teks-redup);
+}

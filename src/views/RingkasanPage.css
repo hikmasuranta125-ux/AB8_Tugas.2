@@ -1,0 +1,98 @@
+.beranda {
+  --background: var(--app-latar);
+}
+
+.isi-beranda {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+}
+
+.kartu-utama {
+  padding: 24px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.28);
+  text-align: center;
+}
+
+.kartu-utama__label {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.kartu-utama__suhu {
+  margin: 6px 0 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.kartu-utama__waktu {
+  margin: 4px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.kisi-ringkasan {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.butir-ringkasan {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1px solid var(--app-garis);
+  border-radius: 14px;
+  background: var(--app-kartu);
+}
+
+.butir-ringkasan__label {
+  font-size: 12px;
+  color: var(--app-teks-redup);
+}
+
+.butir-ringkasan__nilai {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--app-teks);
+}
+
+.bagian-jam__judul {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--app-teks);
+}
+
+.gulir-jam {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+}
+
+.catatan-sumber {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  color: var(--app-teks-redup);
+}
+
+@media (min-width: 640px) {
+  .kisi-ringkasan {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

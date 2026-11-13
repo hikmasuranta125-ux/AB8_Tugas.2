@@ -1,0 +1,133 @@
+.halaman-tabel {
+  --background: var(--app-latar);
+}
+
+.isi-tabel {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+}
+
+.kepala-tabel {
+  margin-bottom: 14px;
+}
+
+.kepala-tabel__judul {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--app-teks);
+}
+
+.kepala-tabel__satuan {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--app-teks-redup);
+}
+
+.pembungkus-tabel {
+  padding: 16px;
+  border: 1px solid var(--app-garis);
+  border-radius: 16px;
+  background: var(--app-kartu);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  overflow-x: auto;
+}
+
+.tabel-data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: var(--app-teks);
+}
+
+.tabel-data thead th {
+  padding: 10px 12px;
+  border-bottom: 2px solid var(--app-garis);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  color: var(--app-teks-redup);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.tabel-data tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--app-garis);
+}
+
+.tabel-data tbody tr:nth-child(even) {
+  background: var(--app-baris-genap);
+}
+
+.tabel-data tbody tr:hover {
+  background: var(--app-baris-hover);
+}
+
+.tabel-data .kolom-nomor {
+  width: 64px;
+  font-variant-numeric: tabular-nums;
+  color: var(--app-teks-redup);
+}
+
+.tabel-data .kolom-suhu {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--app-aksen);
+}
+
+.pembungkus-tabel .dt-container {
+  font-size: 14px;
+  color: var(--app-teks);
+}
+
+.pembungkus-tabel .dt-container .dt-length,
+.pembungkus-tabel .dt-container .dt-search {
+  margin-bottom: 12px;
+  color: var(--app-teks-redup);
+}
+
+.pembungkus-tabel .dt-container .dt-length select,
+.pembungkus-tabel .dt-container .dt-search input {
+  padding: 6px 10px;
+  border: 1px solid var(--app-garis);
+  border-radius: 8px;
+  background: var(--app-kartu);
+  color: var(--app-teks);
+}
+
+.pembungkus-tabel .dt-container .dt-info {
+  padding-top: 12px;
+  color: var(--app-teks-redup);
+}
+
+.pembungkus-tabel .dt-container .dt-paging .dt-paging-button {
+  min-width: 34px;
+  margin-left: 4px;
+  padding: 6px 10px;
+  border: 1px solid var(--app-garis);
+  border-radius: 8px;
+  background: var(--app-kartu);
+  color: var(--app-teks);
+  cursor: pointer;
+}
+
+.pembungkus-tabel .dt-container .dt-paging .dt-paging-button.current {
+  border-color: var(--app-aksen);
+  background: var(--app-aksen);
+  color: #ffffff;
+}
+
+.pembungkus-tabel .dt-container .dt-paging .dt-paging-button.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pembungkus-tabel .dt-container .dt-layout-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}

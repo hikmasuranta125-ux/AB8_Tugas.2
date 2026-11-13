@@ -1,0 +1,104 @@
+.halaman-biodata {
+  --background: var(--app-latar);
+}
+
+.biodata {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+}
+
+.kartu-biodata {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 28px 24px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.28);
+  text-align: center;
+}
+
+.kartu-biodata__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.kartu-biodata__nama {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.kartu-biodata__nim {
+  margin: 2px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.kartu-biodata__peran {
+  margin: 8px 0 0;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.daftar-biodata {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.butir-biodata {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--app-garis);
+  border-radius: 14px;
+  background: var(--app-kartu);
+}
+
+.butir-biodata__ikon {
+  flex: 0 0 auto;
+  font-size: 22px;
+  color: var(--app-aksen);
+}
+
+.butir-biodata__isi {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.butir-biodata__label {
+  font-size: 12px;
+  color: var(--app-teks-redup);
+}
+
+.butir-biodata__nilai {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--app-teks);
+  word-break: break-word;
+}

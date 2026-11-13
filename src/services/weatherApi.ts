@@ -11,7 +11,6 @@ interface ResponsOpenMeteo {
   elevation: number;
   timezone: string;
   hourly_units: {
-    time: string;
     temperature_2m: string;
   };
   hourly: {
@@ -35,28 +34,22 @@ export async function ambilCuacaPerJam(): Promise<DataCuaca> {
   const respons = await fetch(buatUrlApi());
 
   if (!respons.ok) {
-    throw new Error(`Gagal mengambil data cuaca (HTTP ${respons.status}).`);
+    throw new Error('Gagal mengambil data cuaca');
   }
 
-  const muatan = (await respons.json()) as ResponsOpenMeteo;
-  const daftarWaktu = muatan.hourly?.time ?? [];
-  const daftarSuhu = muatan.hourly?.temperature_2m ?? [];
+  const hasil = (await respons.json()) as ResponsOpenMeteo;
 
-  if (daftarWaktu.length === 0) {
-    throw new Error('API tidak mengembalikan data prakiraan cuaca.');
-  }
-
-  const prakiraan: CuacaPerJam[] = daftarWaktu.map((waktu, indeks) => ({
+  const prakiraan: CuacaPerJam[] = hasil.hourly.time.map((waktu, indeks) => ({
     waktu,
-    suhu: daftarSuhu[indeks],
+    suhu: hasil.hourly.temperature_2m[indeks],
   }));
 
   return {
-    lintang: muatan.latitude,
-    bujur: muatan.longitude,
-    elevasi: muatan.elevation,
-    zonaWaktu: muatan.timezone,
-    satuan: muatan.hourly_units?.temperature_2m ?? '°C',
+    lintang: hasil.latitude,
+    bujur: hasil.longitude,
+    elevasi: hasil.elevation,
+    zonaWaktu: hasil.timezone,
+    satuan: hasil.hourly_units.temperature_2m,
     prakiraan,
   };
 }
